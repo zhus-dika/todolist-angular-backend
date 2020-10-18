@@ -32,7 +32,7 @@ public class TodoitemController {
     @Autowired
     private JwtTokenProvider tokenProvider;
     @PostMapping("/create")
-    public ResponseEntity newTodoitem(@RequestBody String content, @RequestHeader (name="Authorization") String token) {
+    public ResponseEntity<TodoitemDto> newTodoitem(@RequestBody String content, @RequestHeader (name="Authorization") String token) {
         try {
             Todoitem todoitem = new Todoitem();
             todoitem.setContent(content);
@@ -40,8 +40,8 @@ public class TodoitemController {
             todoitem.setStatus("created");
             User user = userService.getUser(tokenProvider.getUsername(token));
             todoitem.setUser(user);
-            todoitemRepository.save(todoitem);
-            return new ResponseEntity<>(HttpStatus.OK);
+            Todoitem newItem = todoitemRepository.save(todoitem);
+            return new ResponseEntity<>(TodoitemDto.fromTodoitem(newItem), HttpStatus.OK);
         } catch (NotFoundException e) {
             throw new BadCredentialsException("Invalid data");
         }
