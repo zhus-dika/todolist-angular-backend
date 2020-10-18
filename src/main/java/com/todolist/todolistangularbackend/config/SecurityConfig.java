@@ -61,11 +61,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
                 //http.requiresChannel().anyRequest().requiresSecure();
 
     }
-    @Override
+    /*@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 //.allowedOrigins("https://planet9.kz")
                 .allowedOrigins("https://1747fa8c3b44.ngrok.io")
                 .allowedMethods("*");
-    }
+    }*/
 }

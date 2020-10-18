@@ -13,7 +13,7 @@ public class TodolistAngularBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TodolistAngularBackendApplication.class, args);
 	}
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -23,5 +23,5 @@ public class TodolistAngularBackendApplication {
 
             }
         };
-    }
+    }*/
 }
