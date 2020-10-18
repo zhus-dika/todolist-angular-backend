@@ -19,7 +19,7 @@ public class TodolistAngularBackendApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 //registry.addMapping("/").allowedHeaders("*").allowedOrigins("https://planet9.kz");
-                registry.addMapping("/").allowedHeaders("*").allowedOrigins("http://localhost:4200");
+                registry.addMapping("/").allowedHeaders("*").allowedOrigins("https://young-sierra-45019.herokuapp.com");
 
             }
         };

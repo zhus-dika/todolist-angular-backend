@@ -65,7 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 //.allowedOrigins("https://planet9.kz")
-                .allowedOrigins("http://localhost:4200")
+                .allowedOrigins("https://young-sierra-45019.herokuapp.com")
                 .allowedMethods("*");
     }
 }
